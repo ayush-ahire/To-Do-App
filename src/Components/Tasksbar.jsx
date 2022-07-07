@@ -30,7 +30,7 @@ function Tasksbar() {
   const handleSubmit = (event) => {
     event.preventDefault();
     if(Input === ' '){
-      alert('please enter somthing')
+      alert('please write somthing')
     }else{ 
     setTodos([...Todos, { text: Input, completed: false, id: uuidv4() }]);
     setInput(" ");

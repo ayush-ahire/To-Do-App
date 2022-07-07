@@ -25,11 +25,16 @@ function Tasksbar() {
   const handleChange = (event) => {
     const data = event.target.value;
     setInput(data);
+  
   };
   const handleSubmit = (event) => {
     event.preventDefault();
+    if(Input === ' '){
+      alert('please enter somthing')
+    }else{ 
     setTodos([...Todos, { text: Input, completed: false, id: uuidv4() }]);
     setInput(" ");
+    }
   };
 
 
